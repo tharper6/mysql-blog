@@ -1,12 +1,12 @@
 import { Router } from 'express';
-import blogsRouter from './blogs'
-import blogtagsRouter from './blogtag'
-import tagsRouter from './tags'
+
+import authRouter from './auth'
+import apiRouter from './api'
 
 const router = Router();
 
-router.use('/blogs', blogsRouter)
-router.use('/blogtags', blogtagsRouter)
-router.use('/tags', tagsRouter)
+
+router.use('/auth', authRouter)
+router.use('/api', apiRouter)
 
 export default router;
